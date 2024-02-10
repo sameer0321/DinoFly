@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Chewy&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+.bg-joinbtn {
+    background-image: url("./assets/images/navBtnBg.png");
+}
+
+.bg-heropattern {
+    background-image: url("./assets/images/heroBgImg.png");
+}
+
+@font-face {
+    font-family: 'Lucky Dino';
+    src: url('./assets/Font-Family/LuckyDino.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ff-dino {
+    font-family: 'Lucky Dino';
+}
+
+.ff-chewy {
+    font-family: 'Chewy';
+}
+
+.ff-balsamiq {
+    font-family: 'Balsamiq Sans';
+}
+
+.plan_ani {
+    animation: fly 7000ms linear infinite;
+}
+
+.walking-img {
+    animation: walk 9s steps(10) infinite, forward 12s linear infinite;
+}
+
+.ImgAnimate {
+    animation: walk2 2000s steps(10) infinite, ImgAnimate 12s linear infinite;
+}
+
+.vertical_motion {
+    animation: mover 1.11s infinite alternate;
+}
+
+.bg-herosec {
+    background-image: url('./assets/images/herobg.webp');
+}
+
+@keyframes fly {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(17px, -17px);
+    }
+}
+
+@keyframes walk {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-size: cover;
+    }
+}
+
+@keyframes walk2 {
+    0% {
+        background-position: 0px;
+        left: 25%;
+    }
+
+    100% {
+        background-size: cover;
+        left: 95%;
+    }
+}
+
+@keyframes forward {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(-900px);
+    }
+}
+
+@keyframes ImgAnimate {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(-14px);
+    }
+}
+
+/* ===========================animations=========================== */
+
+.bg-100-100 {
+    background-size: 100% 100%;
+}
+
+@media (max-width: 1024px) {
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    .bg-100-100 {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 576px) {
+    .walking-img {
+        animation: walk 9s steps(10) infinite, forward 6s linear infinite;
+    }
+
+    @keyframes forward {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-300px);
+        }
+    }
+}
