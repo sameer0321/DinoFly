@@ -8,10 +8,10 @@ const Navbar = () => {
     function show() {
         setNav(!nav)
         if (nav === false) {
-            document.body.classNameList.add("max-lg:overflow-hidden")
+            document.body.classList.add("max-lg:overflow-hidden")
         }
         else {
-            document.body.classNameList.remove("max-lg:overflow-hidden")
+            document.body.classList.remove("max-lg:overflow-hidden")
         }
     };
 
